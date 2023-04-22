@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#AF9F8C"
     android:backgroundTint="#AF9F8C"
-    tools:context=".Login">
+    tools:context=".login">
 
     <TextView
         android:id="@+id/login"
@@ -17,7 +17,7 @@
         android:letterSpacing="0.2"
         android:text="login"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/md_theme_light_shadow"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#80D8D8D8"
@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.185" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#80D8D8D8"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.362" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:layout_width="160dp"
         android:layout_height="56dp"
         android:width="174dp"
@@ -68,6 +68,7 @@
         android:backgroundTint="#D8D8D8"
         android:fontFamily="@font/arial"
         android:text="login"
+        android:onClick="loginClick"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -76,11 +77,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.281" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/switchToSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
@@ -90,10 +91,11 @@
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:onClick="switchToSign"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/submit"
         app:layout_constraintVertical_bias="0.781" />
 </androidx.constraintlayout.widget.ConstraintLayout>

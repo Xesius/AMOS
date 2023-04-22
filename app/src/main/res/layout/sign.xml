@@ -10,14 +10,14 @@
     tools:context=".SignUp">
 
     <TextView
-        android:id="@+id/login"
+        android:id="@+id/signup"
         android:layout_width="237dp"
         android:layout_height="58dp"
         android:fontFamily="@font/futura"
         android:letterSpacing="0.2"
         android:text="sign up"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/md_theme_light_shadow"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#80D8D8D8"
@@ -39,11 +39,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/signup"
         app:layout_constraintVertical_bias="0.185" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#80D8D8D8"
@@ -56,17 +56,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/signup"
         app:layout_constraintVertical_bias="0.362" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:layout_width="160dp"
         android:layout_height="56dp"
         android:width="174dp"
         android:height="56dp"
         android:backgroundTint="#D8D8D8"
         android:fontFamily="@font/arial"
+        android:onClick="sign_up"
         android:text="sign up"
         android:textAllCaps="false"
         android:textColor="#000000"
@@ -76,17 +77,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.281" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/switchToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/arial"
         android:text="Have an account?"
+        android:onClick="switchToLogin"
         android:textAllCaps="false"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -94,6 +96,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/submit"
         app:layout_constraintVertical_bias="0.781" />
 </androidx.constraintlayout.widget.ConstraintLayout>
