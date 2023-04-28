@@ -13,22 +13,25 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="none" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
-        style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sr"
+        android:layout_width="302dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/md_theme_light_tertiaryContainer"
-        android:text="test"
+        android:layout_centerHorizontal="true"
 
-        android:textColor="@color/md_theme_light_onTertiaryContainer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        android:hint="Search"
+        app:navigationIcon="@drawable/ic_baseline_search_24"/>
+
+
+    <ListView
+        android:id="@+id/searchbard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btmNav"
+        android:layout_below="@+id/sr"
+        android:layout_alignBottom="@id/btmNav"
+        android:layout_marginTop="-0dp"
+        android:layout_marginBottom="80dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="wrap_content"
