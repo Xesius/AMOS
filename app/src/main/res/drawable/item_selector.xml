@@ -2,7 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_selected="true"
-        android:color="@color/md_theme_light_onTertiaryContainer"/>
+        android:color="@color/md_theme_light_onTertiaryContainer"
+        android:drawable="@color/fbutton_color_transparent"/>
     <item
         android:state_selected="false"
         android:color="@color/md_theme_light_tertiary"/>

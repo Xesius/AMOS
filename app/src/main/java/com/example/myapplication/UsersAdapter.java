@@ -5,56 +5,102 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class UsersAdapter extends ArrayAdapter<User> {
-    private ArrayList<User> now;
-    public UsersAdapter(Context context, ArrayList<User> users) {
-        super(context, 0, users);
-        now = users;
 
+public class UsersAdapter extends ArrayAdapter<Entry> implements Filterable {
+    public List<Entry> now, orig;
+    private CustomFilter cs;
+    private Context c;
+    public UsersAdapter(Context context, List<Entry> entries) {
+        super(context,  R.layout.item_user, entries);
+        this.now = entries;
+        this.orig = entries;
+        this.c = context;
     }
 
+    @Override
+    public int getCount() { return orig.size(); }
+
+    @Override
+    public long getItemId(int i)
+    {
+        return i;
+    }
+
+    @Override
+    public Filter getFilter()
+    {
+        if (cs == null)
+        {
+            cs = new CustomFilter();
+        }
+        return cs;
+    }
 
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // Get the data item for this position
+        LayoutInflater inflater = (LayoutInflater)c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View row = inflater.inflate(R.layout.item_user, null);
+        Entry entry = orig.get(position);
 
-        User user = getItem(position);
 
+        TextView tvName = (TextView) row.findViewById(R.id.name);
+
+        TextView tvHome = (TextView) row.findViewById(R.id.desc);
         // Check if an existing view is being reused, otherwise inflate the view
+        tvName.setText(entry.getName());
 
-        if (convertView == null) {
+        tvHome.setText(entry.getDesc());
 
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
-
-        }
-
-        // Lookup view for data population
-
-        TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
-
-        TextView tvHome = (TextView) convertView.findViewById(R.id.tvHome);
-
-        // Populate the data into the template view using the data object
-
-        tvName.setText(user.name);
-
-        tvHome.setText(user.pass);
-
-        // Return the completed view to render on screen
-
-        return convertView;
+        return row;
 
     }
 
-    public void setFiltered(ArrayList<User> a)
+
+    class CustomFilter extends Filter
     {
-        this.now = a;
-        notifyDataSetChanged();
+
+        @Override
+        protected FilterResults performFiltering(CharSequence cs) {
+            FilterResults fr = new FilterResults();
+
+            if(cs != null && cs.length() > 0)
+            {
+                cs = cs.toString().toUpperCase();
+                ArrayList<Entry> filters = new ArrayList<>();
+                for (int i = 0; i < now.size(); i++)
+                {
+                    if (now.get(i).getName().toUpperCase().contains(cs))
+                    {
+                        Entry en = new Entry(now.get(i).getName(), now.get(i).getDesc(), now.get(i).getPass());
+                        filters.add(en);
+                    }
+                }
+                fr.count = filters.size();
+                fr.values = filters;
+            }
+            else
+            {
+                fr.count = now.size();
+                fr.values = now;
+            }
+            return fr;
+        }
+
+        @Override
+        protected void publishResults(CharSequence cs, FilterResults fr)
+        {
+            orig = (List<Entry>) fr.values;
+            notifyDataSetChanged();
+        }
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_theme_light_background"
+    android:background="@color/md_theme_light_primaryContainer"
     tools:context=".main">
 
     <com.google.android.material.textview.MaterialTextView
@@ -13,14 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="none" />
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/sr"
-        android:layout_width="302dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:addStatesFromChildren="false"
 
+        android:background="@color/md_theme_light_tertiaryContainer"
         android:hint="Search"
-        app:navigationIcon="@drawable/ic_baseline_search_24"/>
+        android:textAppearance="@style/Theme.Material3.DynamicColors.Dark"
+        app:iconifiedByDefault="false"
+        app:navigationIcon="@drawable/ic_baseline_search_24" />
 
 
     <ListView
@@ -31,22 +36,25 @@
         android:layout_below="@+id/sr"
         android:layout_alignBottom="@id/btmNav"
         android:layout_marginTop="-0dp"
-        android:layout_marginBottom="80dp" />
+        android:layout_marginBottom="80dp"
+        android:background="@color/md_theme_light_primaryContainer" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btmNav"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_background"
-        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bottom_background"
         android:elevation="2dp"
-        app:menu="@menu/bottom_menu"
+        app:itemBackground="@color/fbutton_color_transparent"
         app:itemIconSize="30dp"
         app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@color/md_theme_light_shadow"
+        app:itemTextColor="#00FFFFFF"
         app:labelVisibilityMode="unlabeled"
-        app:itemRippleColor="@color/md_theme_light_shadow"/>
+        app:menu="@menu/bottom_menu" />
 </RelativeLayout>
