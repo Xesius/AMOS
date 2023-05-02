@@ -79,6 +79,10 @@
             </intent-filter>
         </activity>
 
+        <service android:name="com.example.myapplication.MyService" />
+
+        <receiver android:name="com.example.myapplication.AirplaneModeChangeReceiver" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.myapplication.androidx-startup"

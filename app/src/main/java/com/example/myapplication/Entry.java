@@ -6,13 +6,14 @@ public class Entry {
     private String pass;
     private String name;
     private String desc;
+    private String user;
 
-    public Entry(String name, String desc, String pass) {
+    public Entry(String name, String desc, String pass, String user) {
 
         this.name = name;
         this.desc = desc;
         this.pass = pass;
-
+        this.user = user;
     }
     public String getName() {
         return name;

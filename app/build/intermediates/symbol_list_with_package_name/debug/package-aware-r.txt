@@ -2809,8 +2809,12 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_back_black_24
 drawable ic_baseline_add_24
+drawable ic_baseline_headset_off_24
+drawable ic_baseline_logout_24
 drawable ic_baseline_search_24
 drawable ic_baseline_settings_24
+drawable ic_baseline_volume_off_24
+drawable ic_baseline_volume_up_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -3005,6 +3009,7 @@ id bounceEnd
 id bounceStart
 id btmNav
 id button
+id button3
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3209,6 +3214,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id music_button
 id name
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3345,6 +3351,7 @@ id submenuarrow
 id submit
 id submit_area
 id supportScrollUp
+id switch1
 id switchToLogin
 id switchToSign
 id tabMode
@@ -3615,6 +3622,7 @@ menu bottom_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw music
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

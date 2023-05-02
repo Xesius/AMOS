@@ -22,14 +22,9 @@ public class DBManager extends SQLiteOpenHelper {
     private static final String COLUMN_NAME = "name";
     private static final String COLUMN_PASS = "password";
 
-    private static final String TABLE02_NAME = "passwords";
+    private static final String TABLE02_NAME = "user_passwords";
     private static final String COLUMN_USER_ID = "user";
-    private static final String IS_PUBLIC = "public";
     private static final String COLUMN_DESC = "description";
-    private static final String COLUMN_INSTRUCT = "instructions";
-    private static final String COLUMN_CATEGORY = "category";
-    private static final String COLUMN_CAL = "cal";
-    private static final String COLUMN_TIME = "time";
 
     private final Context context;
 
@@ -73,15 +68,11 @@ public class DBManager extends SQLiteOpenHelper {
                 COLUMN_NAME + " TEXT, " +
                 COLUMN_PASS + " TEXT);";
         String queryRecipeTable = "CREATE TABLE IF NOT EXISTS " + TABLE02_NAME +
-                " (" + COLUMN_ID + " INTEGER PRIMARY KEY, " +
-                IS_PUBLIC + " INTEGER, " +
-                COLUMN_USER_ID+ " INTEGER, " +
-                COLUMN_CATEGORY + " TEXT, " +
+                " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_USER_ID+ " TEXT, " +
                 COLUMN_NAME + " TEXT, " +
                 COLUMN_DESC + " TEXT, " +
-                COLUMN_INSTRUCT + " TEXT, " +
-                COLUMN_TIME + " INTEGER, " +
-                COLUMN_CAL + " INTEGER);";
+                COLUMN_PASS + " TEXT);";
 
         sqLiteDatabase.execSQL(queryUserTable);
 
@@ -111,19 +102,14 @@ public class DBManager extends SQLiteOpenHelper {
 
     }
 
-    public void insertRecipe(int id, String name, String category, String desc, String instructions, int time, int cal, int isPublic)
+    public void insertNewPass(String name, String desc, String pass, String user)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-
-        cv.put(COLUMN_USER_ID, id);
+        cv.put(COLUMN_USER_ID, user);
         cv.put(COLUMN_NAME, name);
-        cv.put(COLUMN_CATEGORY, category);
         cv.put(COLUMN_DESC, desc);
-        cv.put(COLUMN_INSTRUCT, instructions);
-        cv.put(COLUMN_TIME, time);
-        cv.put(COLUMN_CAL, cal);
-        cv.put(IS_PUBLIC, isPublic);
+        cv.put(COLUMN_PASS, pass);
 
         long result = db.insert(TABLE02_NAME,null, cv);
         if(result == -1){
@@ -189,11 +175,19 @@ public class DBManager extends SQLiteOpenHelper {
         return cursor;
     }
 
-
-    /*public ArrayList<recipe> getRecipes(String category, int userId)
+    public void removeEntry(Entry entry)
     {
-        ArrayList<recipe> data = new ArrayList<recipe>();
-        String query = "SELECT * FROM " + TABLE02_NAME + " WHERE category = '"+category+"' AND user = "+ userId + " OR public = 1 AND category = '"+category+"'";
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.delete(TABLE02_NAME, "name=?", new String[]{entry.getName()});
+        db.close();
+    }
+
+    @SuppressLint("Range")
+    public ArrayList<Entry> getRecipes(String userId)
+    {
+        ArrayList<Entry> data = new ArrayList<Entry>();
+        String query = "SELECT * FROM " + TABLE02_NAME + " WHERE user = '"+ userId+ "';";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = null;
         if(db != null){
@@ -203,16 +197,15 @@ public class DBManager extends SQLiteOpenHelper {
         for (int i = 1 ; i <= cursor.getCount(); i++)
         {
             cursor.getString(cursor.getColumnIndex(COLUMN_NAME));
-            data.add(new recipe(cursor.getString(
-                    cursor.getColumnIndex(COLUMN_NAME)).toString(),
+            data.add(new Entry(
+                    cursor.getString(cursor.getColumnIndex(COLUMN_NAME)).toString(),
                     cursor.getString(cursor.getColumnIndex(COLUMN_DESC)).toString(),
-                    cursor.getString(cursor.getColumnIndex(COLUMN_INSTRUCT)).toString(),
-                    cursor.getInt(cursor.getColumnIndex(COLUMN_TIME)),
-                    cursor.getInt(cursor.getColumnIndex(COLUMN_CAL)),
-                    cursor.getInt(cursor.getColumnIndex(IS_PUBLIC))
+                    cursor.getString(cursor.getColumnIndex(COLUMN_PASS)).toString(),
+                    cursor.getString(cursor.getColumnIndex(COLUMN_USER_ID)).toString()
+
             ));
             cursor.moveToNext();
         }
         return data;
-    }*/
+    }
 }

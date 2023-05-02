@@ -9,10 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -38,19 +40,33 @@ public class main extends AppCompatActivity {
     private UsersAdapter ia;
     BottomNavigationView bottomNavigationView;
     SharedPreferences sp;
-    MediaPlayer mp;
+
     SearchView sv;
+    DBManager bibi;
+    String user_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        test = new ArrayList<>();
+        bibi = new DBManager(main.this);
+        if (musicStatus.music == null) {
+            musicStatus.music = new Intent(this, MyService.class);
+            startService(musicStatus.music);
+        }
+        userName = findViewById(R.id.userName);
+        sp=getSharedPreferences("details", 0);
+        Resources res = getResources();
+        user_name = sp.getString("user", null);
+        userName.setText(String.format(res.getString(R.string.hey_user), user_name));
+        YoYo.with(Techniques.Landing).duration(2000).repeat(0).playOn(userName);
+        //test = new ArrayList<>();
         lv = findViewById(R.id.searchbard);
          sv = findViewById(R.id.sr);
-        Entry newEntry = new Entry("test", "testing", "test123");
-        test.add(newEntry);
-        newEntry = new Entry("meest", "testing", "test123");
-        test.add(newEntry);
+        //Entry newEntry = new Entry("test", "testing", "test123");
+        //test.add(newEntry);
+        //newEntry = new Entry("meest", "testing", "test123");
+        //test.add(newEntry);
+        test = bibi.getRecipes(user_name);
 
         ia = new UsersAdapter(this , test);
         lv.setAdapter(ia);
@@ -91,18 +107,27 @@ public class main extends AppCompatActivity {
                                       }
                                   }
         );
+
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Entry item = ia.orig.get(position);
+                test.remove(item);
+                ia.removeEntry(item);
+                bibi.removeEntry(item);
+                return true;
+            }
+        });
+
         bottomNavigationView = findViewById(R.id.btmNav);
         bottomNavigationView.setSelectedItemId(R.id.bottom_search);
-        userName = findViewById(R.id.userName);
-        sp=getSharedPreferences("details", 0);
-        Resources res = getResources();
-        userName.setText(String.format(res.getString(R.string.hey_user), sp.getString("user", null)));
-        YoYo.with(Techniques.Landing).duration(2000).repeat(0).playOn(userName);
-        /*mp = MediaPlayer.create();
-        mp.start();
+
+
+        /*am = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
+        mp = MediaPlayer.create(main.this, R.raw.music);
         mp.setLooping(true);
-        AudioManager am = (AudioManager) this.getSystemService();
-        am.setStreamVolume(AudioManager.STREAM_SYSTEM, am, 0);*/
+        mp.start();*/
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.bottom_search:
@@ -121,7 +146,8 @@ public class main extends AppCompatActivity {
                             .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    ia.now.add(new Entry(nam.getText().toString(), desc.getText().toString(), pas.getText().toString()));
+                                    ia.now.add(new Entry(nam.getText().toString(), desc.getText().toString(), pas.getText().toString(), user_name));
+                                    bibi.insertNewPass(nam.getText().toString(), desc.getText().toString(), pas.getText().toString(), user_name);
                                     bottomNavigationView.setSelectedItemId(R.id.bottom_search);
                                     dialog.dismiss();
                                 }
@@ -138,7 +164,7 @@ public class main extends AppCompatActivity {
 
                     someActivityResultLauncher.launch(new Intent(getApplicationContext(), settings.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
+                    finish();
                     return true;
             }
 

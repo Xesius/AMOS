@@ -23,6 +23,7 @@ public class UsersAdapter extends ArrayAdapter<Entry> implements Filterable {
         this.now = entries;
         this.orig = entries;
         this.c = context;
+
     }
 
     @Override
@@ -44,6 +45,13 @@ public class UsersAdapter extends ArrayAdapter<Entry> implements Filterable {
         return cs;
     }
 
+
+    public void removeEntry(Entry i)
+    {
+        orig.remove(i);
+        now.remove(i);
+        notifyDataSetChanged();
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -81,7 +89,7 @@ public class UsersAdapter extends ArrayAdapter<Entry> implements Filterable {
                 {
                     if (now.get(i).getName().toUpperCase().contains(cs))
                     {
-                        Entry en = new Entry(now.get(i).getName(), now.get(i).getDesc(), now.get(i).getPass());
+                        Entry en = new Entry(now.get(i).getName(), now.get(i).getDesc(), now.get(i).getPass(), now.get(i).getName());
                         filters.add(en);
                     }
                 }

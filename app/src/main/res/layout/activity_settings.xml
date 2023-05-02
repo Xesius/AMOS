@@ -8,6 +8,22 @@
     tools:context=".settings">
 
 
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_marginTop="183dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toStartOf="@+id/switch1"
+        android:backgroundTint="@color/md_theme_light_error"
+        android:onClick="logOut"
+        android:text="Logout"
+        android:textColor="@color/md_theme_light_onErrorContainer"
+        app:icon="@drawable/ic_baseline_logout_24"
+        app:iconTint="@color/md_theme_light_shadow" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btmNav"
         android:layout_width="wrap_content"
@@ -27,10 +43,12 @@
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/Widget.MaterialComponents.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="TextView"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/button"
@@ -47,4 +65,26 @@
         android:layout_above="@id/button"
         android:layout_centerHorizontal="true"
          />
+
+    <Button
+        android:id="@+id/music_button"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/md_theme_light_error"
+        android:onClick="changeMusic"
+        android:text="Music off"
+        android:textColor="@color/md_theme_light_onErrorContainer"
+        app:icon="@drawable/ic_baseline_volume_off_24"
+        app:iconTint="@color/md_theme_light_shadow" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="183dp"
+        android:text="Music" />
 </RelativeLayout>
