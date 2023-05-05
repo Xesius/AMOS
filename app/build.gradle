@@ -30,7 +30,8 @@ android {
 
 
 dependencies {
-
+    implementation 'androidx.biometric:biometric:1.2.0-alpha05'
+    implementation 'androidx.work:work-testing:2.8.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'info.hoang8f:fbutton:1.0.5'

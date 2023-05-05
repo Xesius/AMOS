@@ -10,9 +10,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 public class MyService extends Service
-        //קלאס של הסרוורס שיפעיל את המוזיקה
 {
-    //הצהרת משתנים
     private static final String TAG = "My Service";
     private MediaPlayer mediaPlayer;
     private boolean playing = false;
@@ -24,9 +22,6 @@ public class MyService extends Service
     public void onCreate() {
         super.onCreate();
 
-        Log.d(TAG, "onCreate: ");
-
-        // פילטר
         IntentFilter filter = new IntentFilter(TelephonyManager.ACTION_PHONE_STATE_CHANGED);
     }
 
@@ -36,12 +31,10 @@ public class MyService extends Service
             mediaPlayer = MediaPlayer.create(MyService.this, R.raw.music);
             mediaPlayer.start();
 
-            // loop
             mediaPlayer.setLooping(true);
             playing = true;
         }
 
-        // !!!
         return START_NOT_STICKY;
     }
 

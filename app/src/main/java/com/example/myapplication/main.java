@@ -1,9 +1,13 @@
 package com.example.myapplication;
 
+import static android.hardware.biometrics.BiometricManager.Authenticators.BIOMETRIC_STRONG;
+import static android.hardware.biometrics.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -14,9 +18,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
+
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -32,6 +41,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
+import java.util.concurrent.Executor;
 
 public class main extends AppCompatActivity {
     private TextView userName;
@@ -40,7 +50,14 @@ public class main extends AppCompatActivity {
     private UsersAdapter ia;
     BottomNavigationView bottomNavigationView;
     SharedPreferences sp;
-
+    BiometricManager biometricManager;
+    BiometricPrompt.PromptInfo promptInfo;
+    TextView tv;
+    TextView hid;
+    int pos_for_auth;
+    boolean authed;
+    private Executor executor;
+    private BiometricPrompt biometricPrompt;
     SearchView sv;
     DBManager bibi;
     String user_name;
@@ -53,19 +70,18 @@ public class main extends AppCompatActivity {
             musicStatus.music = new Intent(this, MyService.class);
             startService(musicStatus.music);
         }
+
+
+
         userName = findViewById(R.id.userName);
         sp=getSharedPreferences("details", 0);
         Resources res = getResources();
         user_name = sp.getString("user", null);
         userName.setText(String.format(res.getString(R.string.hey_user), user_name));
         YoYo.with(Techniques.Landing).duration(2000).repeat(0).playOn(userName);
-        //test = new ArrayList<>();
         lv = findViewById(R.id.searchbard);
          sv = findViewById(R.id.sr);
-        //Entry newEntry = new Entry("test", "testing", "test123");
-        //test.add(newEntry);
-        //newEntry = new Entry("meest", "testing", "test123");
-        //test.add(newEntry);
+
         test = bibi.getRecipes(user_name);
 
         ia = new UsersAdapter(this , test);
@@ -85,18 +101,70 @@ public class main extends AppCompatActivity {
 
         });
 
+        executor = ContextCompat.getMainExecutor(this);
+        biometricPrompt = new BiometricPrompt(main.this,
+                executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode,
+                                              @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                Toast.makeText(getApplicationContext(),
+                                "Authentication error: " + errString, Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                Toast.makeText(getApplicationContext(),
+                        "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+                authed=true;
+                tv.setText(ia.getItem(pos_for_auth).getPass());
+                hid.setText("visib");
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                Toast.makeText(getApplicationContext(), "Authentication failed",
+                                Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Biometric CHECK")
+                .setSubtitle("Please put your finger to test")
+                .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.DEVICE_CREDENTIAL)
+                .build();
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener()
                                   {
                                       @Override
                                       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                           RelativeLayout tw = (RelativeLayout) view;
-                                          TextView tv = tw.findViewById(R.id.textView);
-                                          TextView hid = tw.findViewById(R.id.hidden);
-
-                                          if (hid.getText().toString() == "hidden")
+                                          tv = tw.findViewById(R.id.textView);
+                                          hid = tw.findViewById(R.id.hidden);
+                                          pos_for_auth = position;
+                                          if (hid.getText().toString().contains("hidde"))
                                           {
-                                              tv.setText(ia.getItem(position).getPass());
-                                              hid.setText("visib");
+                                              biometricManager = BiometricManager.from(main.this);
+                                              switch (biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.DEVICE_CREDENTIAL)) {
+                                                  case BiometricManager.BIOMETRIC_SUCCESS:
+                                                      Log.d("MY_APP_TAG", "App can authenticate using biometrics.");
+                                                      biometricPrompt.authenticate(promptInfo);
+
+                                                      break;
+                                                  case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+                                                      Log.e("MY_APP_TAG", "No biometric features available on this device.");
+                                                      break;
+                                                  case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+                                                      Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
+                                                      break;
+                                                  case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                                                      break;
+                                              }
+
                                           }
                                           else
                                           {
@@ -123,11 +191,6 @@ public class main extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.bottom_search);
 
 
-        /*am = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
-        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
-        mp = MediaPlayer.create(main.this, R.raw.music);
-        mp.setLooping(true);
-        mp.start();*/
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.bottom_search:

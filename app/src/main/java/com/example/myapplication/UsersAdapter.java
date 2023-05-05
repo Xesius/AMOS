@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 public class UsersAdapter extends ArrayAdapter<Entry> implements Filterable {
     public List<Entry> now, orig;
     private CustomFilter cs;
@@ -60,23 +58,19 @@ public class UsersAdapter extends ArrayAdapter<Entry> implements Filterable {
         View row = inflater.inflate(R.layout.item_user, null);
         Entry entry = orig.get(position);
 
-
         TextView tvName = (TextView) row.findViewById(R.id.name);
 
         TextView tvHome = (TextView) row.findViewById(R.id.desc);
-        // Check if an existing view is being reused, otherwise inflate the view
+
         tvName.setText(entry.getName());
 
         tvHome.setText(entry.getDesc());
-
         return row;
-
     }
 
 
     class CustomFilter extends Filter
     {
-
         @Override
         protected FilterResults performFiltering(CharSequence cs) {
             FilterResults fr = new FilterResults();

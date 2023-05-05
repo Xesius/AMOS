@@ -1,8 +1,5 @@
 package com.example.myapplication;
 public class Entry {
-
-
-
     private String pass;
     private String name;
     private String desc;
@@ -41,5 +38,13 @@ public class Entry {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }

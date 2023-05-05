@@ -1,174 +1,174 @@
 [
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_dialog_add.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/dialog_add.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_logout_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_logout_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/anim_slide_out_right.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/anim/slide_out_right.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_bottom_background.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/bottom_background.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_search_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_search_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_volume_up_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_volume_up_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_item_selector.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/item_selector.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_search_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_search_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/font_futura.ttf.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/font/futura.ttf"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_bottom_background.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/bottom_background.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_main.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/main.xml"
     },
     {
-        "merged": "com.example.myapplication.app-merged_res-31:/layout_main.xml.flat",
-        "source": "com.example.myapplication.app-main-33:/layout/main.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_logout_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_logout_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/menu_bottom_menu.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/menu/bottom_menu.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_logo_fr.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/logo_fr.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_volume_up_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_volume_up_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/anim_slide_in_left.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/anim/slide_in_left.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/anim_slide_in_left.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/anim/slide_in_left.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_activity_settings.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/activity_settings.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/xml/data_extraction_rules.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/xml_backup_rules.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/xml/backup_rules.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_activity_splash.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/activity_splash.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/anim_slide_out_left.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/anim/slide_out_left.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_add_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_add_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/font_arial.ttf.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/font/arial.ttf"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/xml_backup_rules.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/xml/backup_rules.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/anim_slide_in_right.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/anim/slide_in_right.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_volume_off_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_volume_off_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_activity_splash.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/activity_splash.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_sign.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/sign.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/raw_music.mp3.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/raw/music.mp3"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_settings_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_settings_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_headset_off_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_headset_off_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/anim_slide_in_right.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/anim/slide_in_right.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_activity_add.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/activity_add.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_login.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/login.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-pngs-33:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_activity_settings.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/activity_settings.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-pngs-26:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_dialog_add.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/dialog_add.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_main.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/main.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_login.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/login.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/anim_slide_out_right.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/anim/slide_out_right.xml"
+        "merged": "com.example.myapplication.app-merged_res-38:/layout_item_user.xml.flat",
+        "source": "com.example.myapplication.app-main-40:/layout/item_user.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_logo_fr.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/logo_fr.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/menu_bottom_menu.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/menu/bottom_menu.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_item_user.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/item_user.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/font_futura.ttf.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/font/futura.ttf"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/raw_music.mp3.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/raw/music.mp3"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_activity_add.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/activity_add.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_item_selector.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/item_selector.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_headset_off_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_headset_off_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_baseline_settings_24.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_baseline_settings_24.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_volume_off_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_volume_off_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/layout_sign.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/layout/sign.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/drawable_ic_baseline_add_24.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/drawable/ic_baseline_add_24.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/drawable/ic_launcher_background.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/layout_item_user.xml.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/layout/item_user.xml"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/anim_slide_out_left.xml.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/anim/slide_out_left.xml"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-merged_res-38:/font_arial.ttf.flat",
+        "source": "/Users/benny/.gradle/daemon/8.0/com.example.myapplication.app-main-40:/font/arial.ttf"
     }
 ]
