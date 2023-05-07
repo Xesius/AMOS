@@ -55,7 +55,6 @@ public class main extends AppCompatActivity {
     TextView tv;
     TextView hid;
     int pos_for_auth;
-    boolean authed;
     private Executor executor;
     private BiometricPrompt biometricPrompt;
     SearchView sv;
@@ -119,7 +118,6 @@ public class main extends AppCompatActivity {
                 super.onAuthenticationSucceeded(result);
                 Toast.makeText(getApplicationContext(),
                         "Authentication succeeded!", Toast.LENGTH_SHORT).show();
-                authed=true;
                 tv.setText(ia.getItem(pos_for_auth).getPass());
                 hid.setText("visib");
             }
@@ -157,11 +155,17 @@ public class main extends AppCompatActivity {
                                                       break;
                                                   case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
                                                       Log.e("MY_APP_TAG", "No biometric features available on this device.");
+                                                      tv.setText(ia.getItem(pos_for_auth).getPass());
+                                                      hid.setText("visib");
                                                       break;
                                                   case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
                                                       Log.e("MY_APP_TAG", "Biometric features are currently unavailable.");
+                                                      tv.setText(ia.getItem(pos_for_auth).getPass());
+                                                      hid.setText("visib");
                                                       break;
                                                   case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                                                      tv.setText(ia.getItem(pos_for_auth).getPass());
+                                                      hid.setText("visib");
                                                       break;
                                               }
 
@@ -196,9 +200,6 @@ public class main extends AppCompatActivity {
                 case R.id.bottom_search:
                     return true;
                 case R.id.bottom_add:
-                    /*startActivity(new Intent(getApplicationContext(), add.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();*/
                     View view1 = LayoutInflater.from(main.this).inflate(R.layout.dialog_add, null);
                     TextInputEditText nam = view1.findViewById(R.id.nmin);
                     TextInputEditText pas = view1.findViewById(R.id.passmein);
