@@ -28,11 +28,16 @@ public class DBManager extends SQLiteOpenHelper {
 
     private final Context context;
 
+
     public DBManager(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }
 
+    /**
+     * @param password password to secure
+     * @return string of hashed password
+     */
     private String md5_calc(String password) {
         try {
             // Create a message digest object
